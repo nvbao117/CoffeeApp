@@ -83,6 +83,16 @@ namespace CoffeeApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coupon_1831655 {
+            get {
+                object obj = ResourceManager.GetObject("coupon_1831655", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_1991103__2_ {
             get {
                 object obj = ResourceManager.GetObject("dashboard_1991103 (2)", resourceCulture);
@@ -153,6 +163,16 @@ namespace CoffeeApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paying_9252267 {
+            get {
+                object obj = ResourceManager.GetObject("paying_9252267", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_1828821 {
             get {
                 object obj = ResourceManager.GetObject("plus_1828821", resourceCulture);
@@ -166,6 +186,16 @@ namespace CoffeeApp.Properties {
         internal static System.Drawing.Bitmap poll_9449270 {
             get {
                 object obj = ResourceManager.GetObject("poll_9449270", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printer_430526__1_ {
+            get {
+                object obj = ResourceManager.GetObject("printer_430526 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
