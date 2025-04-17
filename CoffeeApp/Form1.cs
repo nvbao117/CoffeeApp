@@ -15,6 +15,9 @@ namespace CoffeeApp
         public Form1()
         {
             InitializeComponent();
+            this.btnAdmin.Click += new EventHandler(this.btnAdmin_Click);
+            UIHelper uIHelper = new UIHelper(this); 
+            uIHelper.EnableDragging(this.panel1, this.mainPanel, this.headerPanel);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -57,47 +60,7 @@ namespace CoffeeApp
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -105,6 +68,56 @@ namespace CoffeeApp
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            form_dashboard dashboard_Form = new form_dashboard();
+            dashboard_Form.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(dashboard_Form);
+        }
+
+        //private void btnAdmin_Click(object sender, EventArgs e)
+        //{
+        //    mainPanel.Controls.Clear();
+        //    Admin_form admin_Form = new Admin_form();
+        //    admin_Form.Dock = DockStyle.Fill;
+        //    mainPanel.Controls.Add(admin_Form);
+        //}
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            Checkout_form checkout_Form = new Checkout_form();
+            checkout_Form.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(checkout_Form);
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Admin_form ucAdmin = new Admin_form();
+            ucAdmin.Dock = DockStyle.Fill;
+
+            ucAdmin.LoadContentRequested += (uc) =>
+            {
+                mainPanel.Controls.Clear();
+                uc.Dock = DockStyle.Fill;
+                mainPanel.Controls.Add(uc);
+            };
+
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(ucAdmin);
         }
     }
 }

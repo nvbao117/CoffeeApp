@@ -19,17 +19,17 @@ namespace DAL
         {
             var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
-        public DbSet<Account> Accounts { get; set; }
         public DbSet<Bill> Bills { get; set; }
         public DbSet<BillInfo> BillInfos { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<FoodCategory> FoodCategories { get; set; }
         public DbSet<TableFood> TableFoods { get; set; }
-
+        public DbSet<User> Users { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
-            modelBuilder.Configurations.Add(new AccountConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
+            modelBuilder.Configurations.Add(new EmployeeConfiguration());
             modelBuilder.Configurations.Add(new BillConfiguration());
             modelBuilder.Configurations.Add(new BillInfoConfiguration());
             modelBuilder.Configurations.Add(new FoodConfiguration());

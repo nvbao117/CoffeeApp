@@ -8,7 +8,7 @@ namespace CoffeeApp
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private Panel panel2;
+        private Panel headerPanel;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -31,40 +31,49 @@ namespace CoffeeApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnStats = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.form_dashboard3 = new CoffeeApp.form_dashboard();
+            this.admin_Form1 = new CoffeeApp.Admin_form();
+            this.form_dashboard2 = new CoffeeApp.form_dashboard();
+            this.account_form1 = new CoffeeApp.Account_form();
+            this.category_form1 = new CoffeeApp.Category_form();
+            this.checkout_form1 = new CoffeeApp.Checkout_form();
+            this.checkoutAndPrintBill_form1 = new CoffeeApp.CheckoutAndPrintBill_form();
+            this.table_form1 = new CoffeeApp.Table_form();
             this.form_dashboard1 = new CoffeeApp.form_dashboard();
-            this.panel2.SuspendLayout();
+            this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // headerPanel
             // 
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(266, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1054, 47);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.headerPanel.Controls.Add(this.pictureBox2);
+            this.headerPanel.Controls.Add(this.label3);
+            this.headerPanel.Controls.Add(this.label2);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.ForeColor = System.Drawing.Color.Black;
+            this.headerPanel.Location = new System.Drawing.Point(266, 0);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(1054, 47);
+            this.headerPanel.TabIndex = 1;
+            this.headerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox2
             // 
@@ -104,12 +113,12 @@ namespace CoffeeApp
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(44)))), ((int)(((byte)(33)))));
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnCheckout);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnOrder);
+            this.panel1.Controls.Add(this.btnStats);
+            this.panel1.Controls.Add(this.btnAdmin);
+            this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -128,7 +137,6 @@ namespace CoffeeApp
             this.label5.Size = new System.Drawing.Size(158, 28);
             this.label5.TabIndex = 7;
             this.label5.Text = "Nguyễn Vũ Bảo";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -140,23 +148,22 @@ namespace CoffeeApp
             this.label4.Size = new System.Drawing.Size(80, 28);
             this.label4.TabIndex = 4;
             this.label4.Text = " Admin";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button6
+            // btnCheckout
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Image = global::CoffeeApp.Properties.Resources.self_service_5025580;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(12, 598);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(242, 55);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "CHECKOUT";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnCheckout.FlatAppearance.BorderSize = 0;
+            this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCheckout.Image = global::CoffeeApp.Properties.Resources.self_service_5025580;
+            this.btnCheckout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckout.Location = new System.Drawing.Point(12, 598);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(242, 55);
+            this.btnCheckout.TabIndex = 6;
+            this.btnCheckout.Text = "CHECKOUT";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // button5
             // 
@@ -174,69 +181,69 @@ namespace CoffeeApp
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnOrder
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::CoffeeApp.Properties.Resources.manifest_16767941;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 537);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(242, 55);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "ORDER";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.Transparent;
+            this.btnOrder.Image = global::CoffeeApp.Properties.Resources.manifest_16767941;
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.Location = new System.Drawing.Point(12, 537);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(242, 55);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.Text = "ORDER";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
-            // button3
+            // btnStats
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::CoffeeApp.Properties.Resources.poll_9449270;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 476);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 55);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "STATS";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnStats.FlatAppearance.BorderSize = 0;
+            this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStats.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStats.ForeColor = System.Drawing.Color.Transparent;
+            this.btnStats.Image = global::CoffeeApp.Properties.Resources.poll_9449270;
+            this.btnStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStats.Location = new System.Drawing.Point(12, 476);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(242, 55);
+            this.btnStats.TabIndex = 3;
+            this.btnStats.Text = "STATS";
+            this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
-            // button2
+            // btnAdmin
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::CoffeeApp.Properties.Resources.web_development_762714;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(242, 55);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "ADMIN";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.Image = global::CoffeeApp.Properties.Resources.web_development_762714;
+            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmin.Location = new System.Drawing.Point(12, 415);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(242, 55);
+            this.btnAdmin.TabIndex = 2;
+            this.btnAdmin.Text = "ADMIN";
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
-            // button1
+            // btnDashboard
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::CoffeeApp.Properties.Resources.dashboard_1991103__2_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "DASHBOARD";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.Image = global::CoffeeApp.Properties.Resources.dashboard_1991103__2_;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(12, 354);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(242, 55);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "DASHBOARD";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // pictureBox1
             // 
@@ -247,16 +254,82 @@ namespace CoffeeApp
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel3
+            // mainPanel
             // 
-            this.panel3.Controls.Add(this.form_dashboard1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(266, 47);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1054, 753);
-            this.panel3.TabIndex = 2;
+            this.mainPanel.Controls.Add(this.form_dashboard3);
+            this.mainPanel.Controls.Add(this.admin_Form1);
+            this.mainPanel.Controls.Add(this.form_dashboard2);
+            this.mainPanel.Controls.Add(this.account_form1);
+            this.mainPanel.Controls.Add(this.category_form1);
+            this.mainPanel.Controls.Add(this.checkout_form1);
+            this.mainPanel.Controls.Add(this.checkoutAndPrintBill_form1);
+            this.mainPanel.Controls.Add(this.table_form1);
+            this.mainPanel.Controls.Add(this.form_dashboard1);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(266, 47);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1054, 753);
+            this.mainPanel.TabIndex = 2;
+            // 
+            // form_dashboard3
+            // 
+            this.form_dashboard3.Location = new System.Drawing.Point(0, 0);
+            this.form_dashboard3.Name = "form_dashboard3";
+            this.form_dashboard3.Size = new System.Drawing.Size(1054, 753);
+            this.form_dashboard3.TabIndex = 8;
+            // 
+            // admin_Form1
+            // 
+            this.admin_Form1.Location = new System.Drawing.Point(0, 0);
+            this.admin_Form1.Name = "admin_Form1";
+            this.admin_Form1.Size = new System.Drawing.Size(1353, 902);
+            this.admin_Form1.TabIndex = 7;
+            // 
+            // form_dashboard2
+            // 
+            this.form_dashboard2.Location = new System.Drawing.Point(0, 0);
+            this.form_dashboard2.Name = "form_dashboard2";
+            this.form_dashboard2.Size = new System.Drawing.Size(1054, 753);
+            this.form_dashboard2.TabIndex = 6;
+            // 
+            // account_form1
+            // 
+            this.account_form1.BackColor = System.Drawing.Color.Gainsboro;
+            this.account_form1.Location = new System.Drawing.Point(0, 0);
+            this.account_form1.Name = "account_form1";
+            this.account_form1.Size = new System.Drawing.Size(1054, 753);
+            this.account_form1.TabIndex = 5;
+            // 
+            // category_form1
+            // 
+            this.category_form1.Location = new System.Drawing.Point(0, 0);
+            this.category_form1.Name = "category_form1";
+            this.category_form1.Size = new System.Drawing.Size(1054, 753);
+            this.category_form1.TabIndex = 4;
+            // 
+            // checkout_form1
+            // 
+            this.checkout_form1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(190)))), ((int)(((byte)(169)))));
+            this.checkout_form1.Location = new System.Drawing.Point(0, 0);
+            this.checkout_form1.Name = "checkout_form1";
+            this.checkout_form1.Size = new System.Drawing.Size(1054, 753);
+            this.checkout_form1.TabIndex = 3;
+            // 
+            // checkoutAndPrintBill_form1
+            // 
+            this.checkoutAndPrintBill_form1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(190)))), ((int)(((byte)(169)))));
+            this.checkoutAndPrintBill_form1.Location = new System.Drawing.Point(0, 0);
+            this.checkoutAndPrintBill_form1.Name = "checkoutAndPrintBill_form1";
+            this.checkoutAndPrintBill_form1.Size = new System.Drawing.Size(1054, 753);
+            this.checkoutAndPrintBill_form1.TabIndex = 2;
+            // 
+            // table_form1
+            // 
+            this.table_form1.Location = new System.Drawing.Point(0, 0);
+            this.table_form1.Name = "table_form1";
+            this.table_form1.Size = new System.Drawing.Size(1054, 753);
+            this.table_form1.TabIndex = 1;
             // 
             // form_dashboard1
             // 
@@ -269,20 +342,21 @@ namespace CoffeeApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1320, 800);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.Color.Coral;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,19 +365,27 @@ namespace CoffeeApp
 
         private Panel panel1;
         private PictureBox pictureBox1;
-        private Button button2;
-        private Button button1;
-        private Button button6;
+        private Button btnAdmin;
+        private Button btnDashboard;
+        private Button btnCheckout;
         private Button button5;
-        private Button button4;
-        private Button button3;
+        private Button btnOrder;
+        private Button btnStats;
         private Label label3;
         private Label label2;
         private PictureBox pictureBox2;
         private Label label5;
         private Label label4;
-        private Panel panel3;
+        private Panel mainPanel;
+        private Account_form account_form1;
+        private Category_form category_form1;
+        private Checkout_form checkout_form1;
+        private CheckoutAndPrintBill_form checkoutAndPrintBill_form1;
+        private Table_form table_form1;
         private form_dashboard form_dashboard1;
+        private form_dashboard form_dashboard2;
+        private Admin_form admin_Form1;
+        private form_dashboard form_dashboard3;
     }
 }
 
