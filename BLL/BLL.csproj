@@ -52,11 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessComponents\AuthService.cs" />
+    <Compile Include="BusinessComponents\ForgotPasswordService.cs" />
     <Compile Include="BusinessComponents\MenuService.cs" />
     <Compile Include="BusinessComponents\UserService.cs" />
     <Compile Include="BusinessEntities\EmployeeDTO.cs" />
+    <Compile Include="BusinessEntities\PasswordResetTokenDTO.cs" />
     <Compile Include="BusinessEntities\RoleDTO.cs" />
     <Compile Include="BusinessEntities\UserDTO.cs" />
+    <Compile Include="Mappers\PasswordResetTokenMapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

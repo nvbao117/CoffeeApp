@@ -19,5 +19,6 @@ namespace DAL.Entities
         public bool IsActive { get; set; }
 
         public virtual Employee Employee { get; set; }
+        public virtual PasswordResetToken PasswordResetToken { get; set; }
     }
 }

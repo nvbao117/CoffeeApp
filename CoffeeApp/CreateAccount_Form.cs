@@ -104,9 +104,7 @@ namespace CoffeeApp
                 }
                 this.Hide();
             }
-
         }
-
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (!chkShowPassword.Checked)

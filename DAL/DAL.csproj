@@ -57,6 +57,7 @@
     <Compile Include="Configuration\EmployeeConfiguration.cs" />
     <Compile Include="Configuration\FoodCategoryConfiguration.cs" />
     <Compile Include="Configuration\FoodConfiguration.cs" />
+    <Compile Include="Configuration\PasswordResetTokenConfiguration.cs" />
     <Compile Include="Configuration\TableFoodConfiguration.cs" />
     <Compile Include="Configuration\UserConfiguration.cs" />
     <Compile Include="Entities\Bill.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Food.cs" />
     <Compile Include="Entities\FoodCategory.cs" />
+    <Compile Include="Entities\PasswordResetToken.cs" />
     <Compile Include="Entities\TableFood.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\FoodCategoryRepository.cs" />
     <Compile Include="Repositories\FoodRepository.cs" />
+    <Compile Include="Repositories\PasswordResetTokenRepository.cs" />
     <Compile Include="Repositories\TableFoodRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>

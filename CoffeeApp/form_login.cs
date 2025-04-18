@@ -111,5 +111,21 @@ namespace CoffeeApp
         {
             lblSignUp.ForeColor = Color.Black;
         }
+
+        private void lblForgotPsw_MouseHover(object sender, EventArgs e)
+        {
+            lblForgotPsw.ForeColor = Color.White;
+        }
+
+        private void lblForgotPsw_MouseLeave(object sender, EventArgs e)
+        {
+            lblForgotPsw.ForeColor = Color.Maroon; 
+        }
+
+        private void lblForgotPsw_Click(object sender, EventArgs e)
+        {
+            var forgotPassword_form = new FogotPassword_Form();
+            forgotPassword_form.ShowDialog();
+        }
     }
 }

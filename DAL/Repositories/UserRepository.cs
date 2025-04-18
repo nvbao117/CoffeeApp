@@ -39,6 +39,10 @@ namespace DAL.Repositories
         {
             return _context.Users.FirstOrDefault(u => u.Username == username);
         }
+        public string GetEmailByUserName(string username)
+        {
+            return _context.Database.SqlQuery<string>("SELECT dbo.func_GetEmailByUserName(@p0)", username).FirstOrDefault();
+        }
         public void Update(User user)
         {
             var existingUser = _context.Users.Find(user.UserId);

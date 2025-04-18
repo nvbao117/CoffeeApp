@@ -84,6 +84,12 @@
     <Compile Include="CreateAccount_Form.Designer.cs">
       <DependentUpon>CreateAccount_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="FogotPassword_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FogotPassword_Form.Designer.cs">
+      <DependentUpon>FogotPassword_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
       <DependentUpon>Table_form.cs</DependentUpon>
     </Compile>
     <Compile Include="UIHelpers\UIHelper.cs" />
+    <Compile Include="VerifyCode_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyCode_Form.Designer.cs">
+      <DependentUpon>VerifyCode_Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Account_form.resx">
       <DependentUpon>Account_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount_Form.resx">
       <DependentUpon>CreateAccount_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FogotPassword_Form.resx">
+      <DependentUpon>FogotPassword_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -150,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="Table_form.resx">
       <DependentUpon>Table_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerifyCode_Form.resx">
+      <DependentUpon>VerifyCode_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

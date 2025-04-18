@@ -9,6 +9,8 @@ using DAL;
 using AppContext = DAL.AppContext;
 using DAL.Repositories;
 using BLL.Mappers;
+using System.Net.Mail;
+using System.Net;
 
 namespace BLL.BusinessComponents
 {
@@ -67,20 +69,13 @@ namespace BLL.BusinessComponents
         //        IsActive = user.IsActive
         //    };
         //}
+        public (UserDTO,string) GetUserAndEmailByUsername(string username)
+        {
+            var user = GetUserByUsername(username);
+            var email = _userRepository.GetEmailByUserName(username);
 
-        //private User MapToEntity(UserDTO dto)
-        //{
-        //    return new User
-        //    {
-        //        UserId = dto.UserId,
-        //        Username = dto.Username,
-        //        Password = dto.Password,
-        //        Role = dto.Role,
-        //        CreatedDate = dto.CreatedDate,
-        //        LastLoginDate = dto.LastLoginDate,
-        //        IsActive = dto.IsActive
-        //    };
-        //}
+            return (user,email);
+        }
 
         public List<RoleDTO> getAllRole()
         {

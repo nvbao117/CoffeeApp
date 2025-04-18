@@ -38,7 +38,7 @@
             this.lblError = new System.Windows.Forms.Label();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblForgotPsw = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -119,7 +119,7 @@
             this.panel2.Controls.Add(this.lblError);
             this.panel2.Controls.Add(this.lblSignUp);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblForgotPsw);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
@@ -175,16 +175,20 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Don\'t you have account ?";
             // 
-            // label5
+            // lblForgotPsw
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(318, 415);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "forgot password";
+            this.lblForgotPsw.AutoSize = true;
+            this.lblForgotPsw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPsw.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPsw.ForeColor = System.Drawing.Color.Maroon;
+            this.lblForgotPsw.Location = new System.Drawing.Point(318, 415);
+            this.lblForgotPsw.Name = "lblForgotPsw";
+            this.lblForgotPsw.Size = new System.Drawing.Size(106, 17);
+            this.lblForgotPsw.TabIndex = 17;
+            this.lblForgotPsw.Text = "forgot password";
+            this.lblForgotPsw.Click += new System.EventHandler(this.lblForgotPsw_Click);
+            this.lblForgotPsw.MouseLeave += new System.EventHandler(this.lblForgotPsw_MouseLeave);
+            this.lblForgotPsw.MouseHover += new System.EventHandler(this.lblForgotPsw_MouseHover);
             // 
             // label4
             // 
@@ -275,7 +279,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblForgotPsw;
         private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblError;
