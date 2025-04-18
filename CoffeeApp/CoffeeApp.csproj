@@ -66,6 +66,12 @@
     <Compile Include="Category_form.Designer.cs">
       <DependentUpon>Category_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword_form.Designer.cs">
+      <DependentUpon>ChangePassword_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckoutAndPrintBill_form.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Category_form.resx">
       <DependentUpon>Category_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword_form.resx">
+      <DependentUpon>ChangePassword_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckoutAndPrintBill_form.resx">
       <DependentUpon>CheckoutAndPrintBill_form.cs</DependentUpon>

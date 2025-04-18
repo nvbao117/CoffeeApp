@@ -44,11 +44,11 @@ namespace BLL.BusinessComponents
             _userRepository.Add(user);
         }
 
-        //public void UpdateUser(UserDTO userDto)
-        //{
-        //    var user = MapToEntity(userDto);
-        //    _userRepository.Update(user);
-        //}
+        public void UpdateUser(UserDTO userDto)
+        {
+            var user = Mappers.UserMapper.ToEntity(userDto);
+            _userRepository.Update(user);
+        }
 
         //public void DeleteUser(int id)
         //{

@@ -24,7 +24,8 @@ namespace CoffeeApp
 
         private void lblBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close() ;
+        
         }
 
         private void btnSendCode_Click(object sender, EventArgs e)
@@ -32,9 +33,9 @@ namespace CoffeeApp
             string email = txtEmail.Text;
             string username = txtUsername.Text;
 
-            if(string.IsNullOrWhiteSpace(email) )
+            if (string.IsNullOrWhiteSpace(email))
             {
-                MessageBox.Show("Vui lòng nhập email.","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập email.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (string.IsNullOrWhiteSpace(username))
@@ -42,10 +43,10 @@ namespace CoffeeApp
                 MessageBox.Show("Vui lòng nhập tên đăng nhập.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var (user,useremail) = _userService.GetUserAndEmailByUsername(username);
-            if(user == null)
+            var (user, useremail) = _userService.GetUserAndEmailByUsername(username);
+            if (user == null)
             {
-                Console.WriteLine($"User: {user}, Email: {email}");
+                MessageBox.Show("Không tồn tại Username", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (!string.Equals(useremail, email, StringComparison.OrdinalIgnoreCase))
@@ -55,16 +56,22 @@ namespace CoffeeApp
             }
 
             string token = _forgotPasswordService.GenerateResetToken(username);
-            if (token == null) 
+            if (token == null)
             {
                 MessageBox.Show("Không thể tạo mã xác nhận.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             MessageBox.Show("Mã xác nhận đã được gửi đến email của bạn.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            var verifyForm = new VerifyCode_Form(email);
-            verifyForm.Show();
-            this.Hide();
+            var verifyForm = new VerifyCode_Form(username,email);
+            verifyForm.ShowDialog();
+            this.Hide(); 
+
         }
+
+            private void label2_Click(object sender, EventArgs e)
+            {
+                this.Close();
+            }
     }
 }

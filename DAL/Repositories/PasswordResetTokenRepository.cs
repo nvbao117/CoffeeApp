@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,11 +62,12 @@ namespace DAL.Repositories
             }
         }
 
-        // Lấy token hợp lệ theo mã token và chưa hết hạn
-        public PasswordResetToken GetValidToken(string token)
+        public bool CheckValidate(int userId , string token)
         {
-            return _context.PasswordResetTokens
-                .FirstOrDefault(t => t.Token == token && !t.IsUsed && t.Expr >= DateTime.UtcNow);
+            return _context.Database.SqlQuery<bool>("EXEC [dbo].SP_ValidateOTP @P1,@P2", 
+                new SqlParameter("@P1", userId),
+                new SqlParameter("@P2", token)
+                ).FirstOrDefault(); 
         }
     }
 }

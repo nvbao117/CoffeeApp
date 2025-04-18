@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Repositories;
 using BLL.Mappers;
+using DAL.Entities;
 namespace BLL.BusinessComponents
 {
     public class ForgotPasswordService
@@ -22,16 +23,12 @@ namespace BLL.BusinessComponents
         public string GenerateResetToken(string username)
         {
             var (user, email) = _userService.GetUserAndEmailByUsername(username);
-
             if (user == null || string.IsNullOrEmpty(email))
             {
                 return null;
             }
             string token = new Random().Next(100000, 999999).ToString();
             DateTime expr = DateTime.Now.AddHours(1);
-            Console.WriteLine($"User: {user.UserId}{user.Username}, Email: {email}");
-            Console.WriteLine($"Generated Token: {token}");
-
             var passwordResetToken = new PasswordResetTokenDTO
             {
                 UserId = user.UserId,
@@ -41,10 +38,7 @@ namespace BLL.BusinessComponents
             };
             var passwordResetTokenEntity = PasswordResetTokenMapper.ToEntity(passwordResetToken);
             _passwordResetTokenRepository.Add(passwordResetTokenEntity);
-
             SendResetPasswordEmail(email, token);
-
-
             return token;
         }
 
@@ -84,5 +78,10 @@ namespace BLL.BusinessComponents
             }
         }
 
+        public bool CheckValidate(string username ,  string token)
+        {
+            int userid = _userService.GetUserByUsername(username).UserId;
+            return _passwordResetTokenRepository.CheckValidate(userid, token);
+        }
     }
 }
