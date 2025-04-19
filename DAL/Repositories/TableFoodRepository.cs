@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
-    internal class TableFoodRepository
+    public class TableFoodRepository
     {
+        private readonly AppContext _appContext;
+        public TableFoodRepository()
+        {
+            _appContext = new AppContext();
+        }
+
+        public int getCountTableAvailable()
+        {
+            int count = _appContext.Database.SqlQuery<int>("SELECT dbo.func_getCountTableAvailable()").FirstOrDefault();
+            return count;
+        }
     }
 }

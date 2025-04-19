@@ -27,5 +27,6 @@ namespace BLL.BusinessEntities
         public string Address { get; set; }
 
         public string Notes { get; set; }
+        public string LinkImage { get; set; }
     }
 }

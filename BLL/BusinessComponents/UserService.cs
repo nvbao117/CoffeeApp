@@ -37,7 +37,16 @@ namespace BLL.BusinessComponents
         //    var users = _userRepository.GetAll();
         //    return users.Select(u => MapToDTO(u)).ToList();
         //}
+        public string getFullName(int userId)
+        {
 
+            string fullname =  _userRepository.GetFullName(userId); 
+            if(fullname == null)
+            {
+                throw new Exception("J=Không tìm thấy họ tên cho người dùng có Id :" + userId); 
+            }
+            return fullname;
+        }
         public void AddUser(UserDTO userDto)
         {
             var user = UserMapper.ToEntity(userDto);

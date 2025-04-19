@@ -29,6 +29,8 @@ namespace DAL.Entities
 
         public string Notes { get; set; }
 
+        public string LinkImage { get; set; }
         public virtual User User { get; set; }
+        
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,18 @@ namespace DAL.Repositories
 
                 _context.SaveChanges();
             }
+        }
+        public string getLinkImage(int userid)
+        {
+            var param = new SqlParameter("@p1", userid);
+            string link = _context.Database.SqlQuery<string>("EXEC dbo.USP_getAvatar @p1", param).FirstOrDefault()?.ToString();
+            return link;
+        }
+
+        public int getCountEmployee()
+        {
+            int count = _context.Database.SqlQuery<int>("SELECT dbo.func_countTotalEmployee()").FirstOrDefault();
+            return count;
         }
     }
 }

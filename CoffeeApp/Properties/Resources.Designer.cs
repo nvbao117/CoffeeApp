@@ -113,6 +113,16 @@ namespace CoffeeApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap defaultAVT {
+            get {
+                object obj = ResourceManager.GetObject("defaultAVT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_10336397 {
             get {
                 object obj = ResourceManager.GetObject("delete_10336397", resourceCulture);

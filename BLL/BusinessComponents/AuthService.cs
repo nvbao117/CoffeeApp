@@ -13,7 +13,7 @@ namespace BLL.BusinessComponents
     {
         private readonly UserRepository _userRepository;
 
-        private static UserDTO _currentUser;
+        public static UserDTO _currentUser;
         public static UserDTO CurrentUser
         {
             get { return _currentUser; }

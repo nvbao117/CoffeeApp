@@ -53,7 +53,7 @@ namespace CoffeeApp
                 bool isAuthenticated = _authService.Authenticate(username, password);
                 if (isAuthenticated)
                 {
-                    // Login successful, open the main form
+                    
                     var mainForm = new Form1();
                     this.Hide();
                     mainForm.Show();

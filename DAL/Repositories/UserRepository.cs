@@ -43,6 +43,12 @@ namespace DAL.Repositories
         {
             return _context.Database.SqlQuery<string>("SELECT dbo.func_GetEmailByUserName(@p0)", username).FirstOrDefault();
         }
+
+        public string GetFullName(int userid)
+        {
+            string fullName = _context.Database.SqlQuery<string>("SELECT dbo.func_getFullName(@p0)", userid).FirstOrDefault();
+            return fullName; 
+        }
         public void Update(User user)
         {
             var existingUser = _context.Users.Find(user.UserId);
