@@ -26,6 +26,7 @@ namespace DAL
         public DbSet<TableFood> TableFoods { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<RecentActivity> RecentActivities { get; set; }
         public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,6 +38,7 @@ namespace DAL
             modelBuilder.Configurations.Add(new FoodCategoryConfiguration());
             modelBuilder.Configurations.Add(new TableFoodConfiguration());
             modelBuilder.Configurations.Add(new PasswordResetTokenConfiguration());
+            modelBuilder.Configurations.Add(new ActivitiesConfiguration()); 
             base.OnModelCreating(modelBuilder);
 
         }

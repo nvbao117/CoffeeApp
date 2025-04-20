@@ -13,7 +13,8 @@ namespace DAL.Entities
         public double Price { get; set; }
 
         // Khóa ngoại đến FoodCategory
-        public int FoodCategoryId { get; set; }
+        public int idCategory { get; set; }
+        public string Image { get; set; }
 
         // Navigation property đến FoodCategory
         public virtual FoodCategory FoodCategory { get; set; }

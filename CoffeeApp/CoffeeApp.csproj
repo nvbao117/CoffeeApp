@@ -96,6 +96,9 @@
     <Compile Include="CreateAccount_Form.Designer.cs">
       <DependentUpon>CreateAccount_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customize\ProductCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FogotPassword_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,12 +123,6 @@
     <Compile Include="form_login.Designer.cs">
       <DependentUpon>form_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OrderDashboard.Designer.cs">
-      <DependentUpon>OrderDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="overviewdashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,13 +136,16 @@
       <DependentUpon>ProductDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Table_form.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Table_form.Designer.cs">
       <DependentUpon>Table_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIHelpers\ImageHelper.cs" />
     <Compile Include="UIHelpers\UIHelper.cs" />
     <Compile Include="VerifyCode_Form.cs">
       <SubType>Form</SubType>
@@ -153,6 +153,30 @@
     <Compile Include="VerifyCode_Form.Designer.cs">
       <DependentUpon>VerifyCode_Form.cs</DependentUpon>
     </Compile>
+    <Content Include="Resources\imgProduct\prd1.jpg" />
+    <Content Include="Resources\imgProduct\prd10.jpg" />
+    <Content Include="Resources\imgProduct\prd11.jpg" />
+    <Content Include="Resources\imgProduct\prd12.jpg" />
+    <Content Include="Resources\imgProduct\prd13.jpg" />
+    <Content Include="Resources\imgProduct\prd14.jpg" />
+    <Content Include="Resources\imgProduct\prd15.jpg" />
+    <Content Include="Resources\imgProduct\prd16.jpg" />
+    <Content Include="Resources\imgProduct\prd17.jpg" />
+    <Content Include="Resources\imgProduct\prd18.jpg" />
+    <Content Include="Resources\imgProduct\prd19.jpg" />
+    <Content Include="Resources\imgProduct\prd2.jpg" />
+    <Content Include="Resources\imgProduct\prd20.jpg" />
+    <Content Include="Resources\imgProduct\prd21.jpg" />
+    <Content Include="Resources\imgProduct\prd22.jpg" />
+    <Content Include="Resources\imgProduct\prd23.jpg" />
+    <Content Include="Resources\imgProduct\prd24.jpg" />
+    <Content Include="Resources\imgProduct\prd25.jpg" />
+    <Content Include="Resources\imgProduct\prd3.jpg" />
+    <Content Include="Resources\imgProduct\prd4.jpg" />
+    <Content Include="Resources\imgProduct\prd5.jpg" />
+    <Content Include="Resources\imgProduct\prd6.jpg" />
+    <Content Include="Resources\imgProduct\prd7.jpg" />
+    <Content Include="Resources\imgProduct\prd9.jpg" />
     <EmbeddedResource Include="Account_form.resx">
       <DependentUpon>Account_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +213,9 @@
     <EmbeddedResource Include="overviewdashboard.resx">
       <DependentUpon>overviewdashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductDashboard.resx">
+      <DependentUpon>ProductDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -206,10 +233,10 @@
       <DependentUpon>VerifyCode_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
+    <Content Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
+    </Content>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -298,8 +325,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="NewFolder1\" />
     <Folder Include="Resources\avatar\" />
-    <Folder Include="Resources\imgProduct\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\defaultAVT.png" />
@@ -316,4 +343,9 @@
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+<ItemGroup>
+  <Content Include="Resources\imgProduct\**\*.*">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
 </Project>

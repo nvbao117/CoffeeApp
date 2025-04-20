@@ -16,15 +16,13 @@ namespace BLL.BusinessComponents
 {
     public class UserService 
     {
-        //public UserDTO GetUserById(int id)
-        //{
-        //    var user = _userRepository.GetById(id);
-        //    return user != null ? MapToDTO(user) : null;
-        //}
+
+        private readonly RecentActivityService _recentActivityService;
         private readonly UserRepository _userRepository;
         public UserService()
         {
             _userRepository = new UserRepository();
+            _recentActivityService = new RecentActivityService();
         }
         public UserDTO GetUserByUsername(string username)
         {
@@ -32,11 +30,7 @@ namespace BLL.BusinessComponents
             return user != null ? UserMapper.ToDTO(user) : null;
         }
 
-        //public IEnumerable<UserDTO> GetAllUsers()
-        //{
-        //    var users = _userRepository.GetAll();
-        //    return users.Select(u => MapToDTO(u)).ToList();
-        //}
+
         public string getFullName(int userId)
         {
 
@@ -51,33 +45,26 @@ namespace BLL.BusinessComponents
         {
             var user = UserMapper.ToEntity(userDto);
             _userRepository.Add(user);
+            _recentActivityService.Log(
+               action: "Add",
+               target: "User",
+               description: $"Người dùng '{user.Username}' vừa được thêm vào",
+               userName: user.Username
+           );
         }
 
         public void UpdateUser(UserDTO userDto)
         {
+
             var user = Mappers.UserMapper.ToEntity(userDto);
             _userRepository.Update(user);
+            _recentActivityService.Log(
+                action: "Update",
+                target: "User",
+                description: $"Người dùng '{user.Username}' vừa được cập nhật",
+                userName: user.Username
+            );
         }
-
-        //public void DeleteUser(int id)
-        //{
-        //    _userRepository.Delete(id);
-        //}
-
-        // Helper methods
-        //private UserDTO MapToDTO(User user)
-        //{
-        //    return new UserDTO
-        //    {
-        //        UserId = user.UserId,
-        //        Username = user.Username,
-        //        Password = user.Password,
-        //        Role = user.Role,
-        //        CreatedDate = user.CreatedDate,
-        //        LastLoginDate = user.LastLoginDate,
-        //        IsActive = user.IsActive
-        //    };
-        //}
         public (UserDTO,string) GetUserAndEmailByUsername(string username)
         {
             var user = GetUserByUsername(username);

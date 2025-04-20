@@ -16,9 +16,10 @@ namespace DAL.Configuration
             HasKey(f => f.Id); 
             Property(f => f.Name).HasMaxLength(100).IsRequired();
             Property(f => f.Price).IsRequired();
+            Property(f => f.Image).HasMaxLength(300).IsOptional();
             HasRequired(f => f.FoodCategory)
                 .WithMany(fc => fc.Foods)
-                .HasForeignKey(f => f.FoodCategoryId);
+                .HasForeignKey(f => f.idCategory);
             
         }
     }

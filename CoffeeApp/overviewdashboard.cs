@@ -16,6 +16,8 @@ namespace CoffeeApp
     public partial class overviewdashboard : UserControl
     {
         private readonly BillService _billService;
+        private readonly RecentActivityService _recentActivityService = new RecentActivityService();
+
         public overviewdashboard()
         {
             InitializeComponent();
@@ -75,6 +77,30 @@ namespace CoffeeApp
             chartRevenue.Invalidate();
 
         }
+        private void LoadRecentActivities()
+        {
+            var activities = _recentActivityService.GetRecentActivities(10);
+
+            flowRecent.Controls.Clear();
+
+            foreach (var activity in activities)
+            {
+                var label = new Label
+                {
+                    AutoSize = false,
+                    Width = flowRecent.Width - 10,
+                    Height = 40,
+                    Font = new Font("Segoe UI", 9),
+                    Text = $"{activity.Timestamp:HH:mm dd/MM} - [{activity.Action}] {activity.Description}",
+                    Padding = new Padding(5),
+                    ForeColor = Color.FromArgb(50, 50, 50),
+                    BackColor = Color.FromArgb(240, 240, 240),
+                    Margin = new Padding(5)
+                };
+
+                flowRecent.Controls.Add(label);
+            }
+        }
         private bool IsInDesignMode()
         {
             return (LicenseManager.UsageMode == LicenseUsageMode.Designtime) || DesignMode;
@@ -83,6 +109,13 @@ namespace CoffeeApp
         {
             var revenueData = _billService.GetMonthlyRevenueOfCurrentYear();
 
+            LoadRevenueChart(revenueData);
+        }
+
+        private void overviewdashboard_Load(object sender, EventArgs e)
+        {
+            LoadRecentActivities();
+            var revenueData = _billService.GetMonthlyRevenueOfCurrentYear();
             LoadRevenueChart(revenueData);
         }
     }

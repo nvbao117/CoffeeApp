@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContext.cs" />
+    <Compile Include="Configuration\ActivitiesConfiguration.cs" />
     <Compile Include="Configuration\BillConfiguration.cs" />
     <Compile Include="Configuration\BillInfoConfiguration.cs" />
     <Compile Include="Configuration\EmployeeConfiguration.cs" />
@@ -66,9 +67,11 @@
     <Compile Include="Entities\Food.cs" />
     <Compile Include="Entities\FoodCategory.cs" />
     <Compile Include="Entities\PasswordResetToken.cs" />
+    <Compile Include="Entities\RecentActivity.cs" />
     <Compile Include="Entities\TableFood.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ActivityRepository.cs" />
     <Compile Include="Repositories\BillInforRepository.cs" />
     <Compile Include="Repositories\BillRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />

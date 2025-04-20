@@ -12,6 +12,7 @@ namespace BLL.BusinessComponents
     public class AuthService 
     {
         private readonly UserRepository _userRepository;
+        private readonly RecentActivityService _recentActivityService;
 
         public static UserDTO _currentUser;
         public static UserDTO CurrentUser
@@ -23,6 +24,7 @@ namespace BLL.BusinessComponents
         public AuthService()
         {
             _userRepository = new UserRepository();
+            _recentActivityService = new RecentActivityService();
         }
         public static bool IsAuthenticated
         {
@@ -54,6 +56,12 @@ namespace BLL.BusinessComponents
                 user.LastLoginDate = DateTime.Now;
                 _userRepository.Update(user);
                 CurrentUser = UserMapper.ToDTO(user);
+                _recentActivityService.Log(
+                    action: "Login",
+                    target: "User",
+                    description: $"Người dùng '{user.Username}' đăng nhập vào hệ thống",
+                    userName: user.Username
+                );
                 return true;
             }
             return false;

@@ -28,14 +28,35 @@ namespace CoffeeApp
 
         private void form_dashboard_Load(object sender, EventArgs e)
         {
-            
+            LoadDashboardData();
+            var overviewDashboard = new overviewdashboard();
+            overviewDashboard.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(overviewDashboard);
         }
+        
         public void LoadDashboardData()
         {
             lblTable.Text = _tableService.getCountTableAvailable().ToString();
             lblCountStaff.Text = _employeeService.getCountEmployee().ToString();
             lblTodayRevenue.Text = _billService.getTodayRevenue().ToString();
             lblTotalRevenue.Text = _billService.getMonthRevenue().ToString();
+        }
+
+        private void btnOverview_Click(object sender, EventArgs e)
+        {
+            var overviewDashboard = new overviewdashboard();
+            overviewDashboard.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(overviewDashboard);
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            var productDashboard = new ProductDashboard();
+            productDashboard.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(productDashboard);
         }
     }
 }

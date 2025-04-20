@@ -46,8 +46,10 @@ namespace CoffeeApp
             this.headerPanel = new System.Windows.Forms.Panel();
             this.lblExit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.form_dashboard1 = new CoffeeApp.form_dashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrAvatar)).BeginInit();
+            this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.headerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -209,6 +211,7 @@ namespace CoffeeApp
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.form_dashboard1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(266, 41);
             this.mainPanel.Name = "mainPanel";
@@ -271,6 +274,14 @@ namespace CoffeeApp
             this.label2.Text = "Coffee Management";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // form_dashboard1
+            // 
+            this.form_dashboard1.BackColor = System.Drawing.Color.RosyBrown;
+            this.form_dashboard1.Location = new System.Drawing.Point(3, 2);
+            this.form_dashboard1.Name = "form_dashboard1";
+            this.form_dashboard1.Size = new System.Drawing.Size(1054, 753);
+            this.form_dashboard1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -287,6 +298,7 @@ namespace CoffeeApp
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptrAvatar)).EndInit();
+            this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
@@ -312,7 +324,7 @@ namespace CoffeeApp
         private Panel headerPanel;
         private Label lblExit;
         private Label label2;
-
+        private form_dashboard form_dashboard1;
     }
 }
 
