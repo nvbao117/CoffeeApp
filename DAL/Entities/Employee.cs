@@ -23,7 +23,7 @@ namespace DAL.Entities
 
         public DateTime HireDate { get; set; }
 
-        public DateTime TerminationDate { get; set; }
+        public DateTime? TerminationDate { get; set; }
 
         public string Address { get; set; }
 

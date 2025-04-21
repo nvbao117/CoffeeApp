@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BusinessComponents\AuthService.cs" />
     <Compile Include="BusinessComponents\BillService.cs" />
+    <Compile Include="BusinessComponents\CategoryService.cs" />
     <Compile Include="BusinessComponents\EmployeeService.cs" />
     <Compile Include="BusinessComponents\FoodService.cs" />
     <Compile Include="BusinessComponents\ForgotPasswordService.cs" />
@@ -61,19 +62,27 @@
     <Compile Include="BusinessComponents\TableService.cs" />
     <Compile Include="BusinessComponents\UserService.cs" />
     <Compile Include="BusinessEntities\ActivityDTO.cs" />
+    <Compile Include="BusinessEntities\FoodCategoryDTO.cs" />
     <Compile Include="BusinessEntities\EmployeeDTO.cs" />
     <Compile Include="BusinessEntities\FoodDTO.cs" />
     <Compile Include="BusinessEntities\MonthlyRevenueDTO.cs" />
     <Compile Include="BusinessEntities\PasswordResetTokenDTO.cs" />
     <Compile Include="BusinessEntities\RoleDTO.cs" />
+    <Compile Include="BusinessEntities\TableFoodDTO.cs" />
     <Compile Include="BusinessEntities\UserDTO.cs" />
     <Compile Include="BusinessEntities\WeeklyRevenueDTO.cs" />
     <Compile Include="Mappers\ActivityMapper.cs" />
+    <Compile Include="Mappers\CategoryMapper.cs" />
     <Compile Include="Mappers\EmployeeMapper.cs" />
     <Compile Include="Mappers\FoodMapper.cs" />
     <Compile Include="Mappers\PasswordResetTokenMapper.cs" />
+    <Compile Include="Mappers\TableFoodMapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
@@ -81,11 +90,6 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

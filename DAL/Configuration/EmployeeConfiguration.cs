@@ -22,9 +22,7 @@ namespace DAL.Configuration
             Property(e => e.Address).HasMaxLength(200).IsOptional();
             Property(e => e.Notes).HasMaxLength(500).IsOptional();
             Property(e => e.LinkImage).HasMaxLength(200).IsOptional();
-            // Khai báo mối quan hệ giữa Employee và User
 
-            // Thiết lập quan hệ 1-1 với User
             HasRequired(e => e.User)
                 .WithOptional(u => u.Employee)
                 .WillCascadeOnDelete(false); 

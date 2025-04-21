@@ -15,7 +15,7 @@ namespace BLL.BusinessEntities
         public string Password { get; set; }
         public int Role { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime? LastLoginDate { get; set; }
+        public DateTime? LastLoginDate { get; set; } 
         public bool IsActive { get; set; }
 
     }

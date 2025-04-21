@@ -10,32 +10,32 @@ namespace BLL.Mappers
 {
     public class FoodMapper
     {
+
         public static FoodDTO ToDTO(Food food)
         {
+            if (food == null) return null;
+
             return new FoodDTO
             {
                 Id = food.Id,
                 Name = food.Name,
                 Price = food.Price,
-                FoodCategoryId  = food.idCategory
+                FoodCategoryId = food.idCategory,
+                Image = food.Image
             };
         }
 
-        public static Employee ToEntity(EmployeeDTO dto)
+        public static Food ToEntity(FoodDTO dto)
         {
-            return new Employee
+            if (dto == null) return null;
+
+            return new Food
             {
-                EmployeeId = dto.EmployeeId,
-                UserId = dto.UserId,
-                FirstName = dto.FirstName,
-                LastName = dto.LastName,
-                Email = dto.Email,
-                Phone = dto.Phone,
-                HireDate = dto.HireDate,
-                TerminationDate = dto.TerminationDate,
-                Address = dto.Address,
-                Notes = dto.Notes,
-                LinkImage = dto.LinkImage
+                Id = dto.Id,
+                Name = dto.Name,
+                Price = dto.Price,
+                idCategory = dto.FoodCategoryId,
+                Image = dto.Image
             };
         }
     }

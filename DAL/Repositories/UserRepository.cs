@@ -27,10 +27,12 @@ namespace DAL.Repositories
                 _context.SaveChanges();
             }
         }
-        public IEnumerable<User> GetAll()
+        public List<User> GetAll()
         {
             return _context.Users.ToList();
         }
+
+        
         public User GetById(int id)
         {
             return _context.Users.Find(id);
@@ -62,6 +64,15 @@ namespace DAL.Repositories
                 existingUser.CreatedDate = user.CreatedDate;
                 _context.SaveChanges();
             }
+        }
+        public List<User> GetListUserByUsername(string username)
+        {
+            return _context.Users.Where(u => u.Username.ToLower().Contains(username)).ToList();
+        }
+
+        public List<User> GetListUserByRole(int role)
+        {
+            return _context.Users.Where(u => u.Role == role).ToList();
         }
     }
 

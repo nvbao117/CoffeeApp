@@ -299,7 +299,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "form_dashboard";
             this.Size = new System.Drawing.Size(1054, 753);
-            this.Load += new System.EventHandler(this.form_dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

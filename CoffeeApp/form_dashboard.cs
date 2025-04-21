@@ -24,16 +24,13 @@ namespace CoffeeApp
             _employeeService = new EmployeeService();
             _tableService = new TableService();
             _billService = new BillService();
-        }
-
-        private void form_dashboard_Load(object sender, EventArgs e)
-        {
             LoadDashboardData();
             var overviewDashboard = new overviewdashboard();
             overviewDashboard.Dock = DockStyle.Fill;
             panel2.Controls.Clear();
             panel2.Controls.Add(overviewDashboard);
         }
+
         
         public void LoadDashboardData()
         {

@@ -39,4 +39,5 @@ namespace BLL.Mappers
         public static List<ActivityDTO> ToDTOList(IEnumerable<RecentActivity> entities)
               => entities.Select(ToDTO).ToList();
     }
+
 }

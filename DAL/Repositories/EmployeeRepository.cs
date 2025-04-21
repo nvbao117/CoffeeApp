@@ -55,7 +55,6 @@ namespace DAL.Repositories
                 existingEmployee.UserId = employee.UserId;
                 existingEmployee.FirstName = employee.FirstName;
                 existingEmployee.LastName = employee.LastName;
-                existingEmployee.User = employee.User;
 
                 _context.SaveChanges();
             }

@@ -15,6 +15,10 @@ namespace DAL.Repositories
         {
             _context = new AppContext();
         }
+        public List<Food> foods()
+        {
+            return _context.Foods.ToList();
+        }
 
         public Food getById(int id)
         {
@@ -54,6 +58,11 @@ namespace DAL.Repositories
 
             _context.Foods.Remove(food);
             _context.SaveChanges();
+        }
+
+        public List<Food> GetListFoodByName(string name)
+        {
+            return _context.Foods.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
         }
     }
 

@@ -7,30 +7,90 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using System.Data.Entity;
+using BLL.Mappers;
+using DAL.Entities;
+using System.Runtime.Remoting.Contexts;
 namespace BLL.BusinessComponents
 {
     public class FoodService
     {
-        private readonly DAL.AppContext _context;
-
+        private readonly FoodRepository _foodRepository; 
         public FoodService()
         {
-            _context = new DAL.AppContext();  
+            _foodRepository = new FoodRepository();
         }
 
         public List<FoodDTO> Foods()
         {
+            var Allfood = _foodRepository.foods();
             List<FoodDTO> foods = new List<FoodDTO>();
-            foods = _context.Foods.Select(f => new FoodDTO
+
+            foreach (Food food in Allfood)
             {
-                Id = f.Id,
-                Name = f.Name,
-                Price = f.Price,
-                FoodCategoryId = f.idCategory,
-                Image = f.Image,
-            }).AsNoTracking().ToList();  
+                foods.Add(new FoodDTO
+                {
+                    Id = food.Id,
+                    Name = food.Name,
+                    Price = food.Price,
+                    FoodCategoryId = food.idCategory,
+                    Image = food.Image
+                });
+            }
+
             return foods;
         }
-       
+        public FoodDTO GetFoodById(int id)
+        {
+            var food = _foodRepository.getById(id);
+            if (food == null) return null;
+            return new FoodDTO
+            {
+                Id = food.Id,
+                Name = food.Name,
+                Price = food.Price,
+                FoodCategoryId = food.idCategory,
+                Image = food.Image
+            };
+        }
+
+        public void AddFood(FoodDTO food)
+        {
+            _foodRepository.Add(FoodMapper.ToEntity(food));
+        }
+        public void Update(FoodDTO food)
+        {
+            var existingFood = _foodRepository.getById(food.Id);
+            if (existingFood == null) return;
+            existingFood.Name = food.Name;
+            existingFood.Price = food.Price;
+            existingFood.Image = food.Image;
+            existingFood.idCategory = food.FoodCategoryId;
+            _foodRepository.Update(existingFood);
+        }
+        public void Delete(int id)
+        {
+            var food = _foodRepository.getById(id);
+            if (food == null) return;
+            _foodRepository.Delete(id);
+
+        }
+        public List<FoodDTO> GetListFoodByName(string name)
+        {
+            var foods = _foodRepository.GetListFoodByName(name);
+            List<FoodDTO> foodList = new List<FoodDTO>();
+            foreach (var food in foods)
+            {
+                foodList.Add(new FoodDTO
+                {
+                    Id = food.Id,
+                    Name = food.Name,
+                    Price = food.Price,
+                    Image = food.Image,
+                    FoodCategoryId = food.idCategory
+                });
+            }
+            return foodList;
+        }
+
     }
 }

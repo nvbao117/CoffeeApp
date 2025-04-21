@@ -15,6 +15,7 @@ namespace CoffeeApp
     {
         private readonly UserService _userService;
         private readonly EmployeeService _employeeService;
+        private Button currentButton = null;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,8 @@ namespace CoffeeApp
             this.btnAdmin.Click += new EventHandler(this.btnAdmin_Click);
             UIHelper uIHelper = new UIHelper(this); 
             uIHelper.EnableDragging(this.panel1, this.mainPanel, this.headerPanel);
-
+            var form_db = new form_dashboard(); 
+            LoadUserControl(form_db);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -84,20 +86,11 @@ namespace CoffeeApp
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            mainPanel.Controls.Clear();
-            form_dashboard dashboard_Form = new form_dashboard();
-            dashboard_Form.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(dashboard_Form);
+            ActivateButton(btnDashboard);
+            LoadUserControl(new form_dashboard());
         }
 
-        //private void btnAdmin_Click(object sender, EventArgs e)
-        //{
-        //    mainPanel.Controls.Clear();
-        //    Admin_form admin_Form = new Admin_form();
-        //    admin_Form.Dock = DockStyle.Fill;
-        //    mainPanel.Controls.Add(admin_Form);
-        //}
-
+        
         private void btnStats_Click(object sender, EventArgs e)
         {
 
@@ -110,26 +103,14 @@ namespace CoffeeApp
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            mainPanel.Controls.Clear();
-            Checkout_form checkout_Form = new Checkout_form();
-            checkout_Form.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(checkout_Form);
+            ActivateButton(btnCheckout);
+            LoadUserControl(new Checkout_form());
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            Admin_form ucAdmin = new Admin_form();
-            ucAdmin.Dock = DockStyle.Fill;
-
-            ucAdmin.LoadContentRequested += (uc) =>
-            {
-                mainPanel.Controls.Clear();
-                uc.Dock = DockStyle.Fill;
-                mainPanel.Controls.Add(uc);
-            };
-
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(ucAdmin);
+            ActivateButton(btnAdmin);
+            LoadUserControl(new Admin_form());
         }
 
         private void lblExit_Click(object sender, EventArgs e)
@@ -152,6 +133,32 @@ namespace CoffeeApp
                 this.Close();
                 AuthService.Logout();
             }
+        }
+        private void ActivateButton(Button clickedButton)
+        {
+            if (currentButton != null)
+            {
+                ResetButtonStyles(currentButton); // Reset cái cũ
+            }
+
+            // Đổi style button mới
+            currentButton = clickedButton;
+            currentButton.BackColor = Color.FromArgb(30, 136, 229); 
+            currentButton.ForeColor = Color.White;
+            currentButton.Font = new Font(currentButton.Font, FontStyle.Bold);
+        }
+
+        private void ResetButtonStyles(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(102, 44, 33); 
+            btn.ForeColor = Color.White;
+            btn.Font = new Font(btn.Font, FontStyle.Regular);
+        }
+        private void LoadUserControl(UserControl uc)
+        {
+            mainPanel.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(uc);
         }
     }
 }
