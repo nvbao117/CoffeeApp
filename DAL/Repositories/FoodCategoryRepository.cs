@@ -1,6 +1,7 @@
 ﻿using DAL.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,15 @@ namespace DAL.Repositories
         {
             _context = new AppContext();
         }
-        // Lấy tất cả danh mục
         public List<FoodCategory> GetAll()
         {
             return _context.FoodCategories.ToList();
         }
 
+        public List<Food> GetFoodInCategory(int category)
+        {
+            return _context.FoodCategories.Where(c => c.Id == category).Include(c => c.Foods).SelectMany(c => c.Foods).ToList();
+        }
         public FoodCategory GetById(int id)
         {
             return _context.FoodCategories.FirstOrDefault(fc => fc.Id == id);
@@ -39,7 +43,6 @@ namespace DAL.Repositories
             if (existing != null)
             {
                 existing.Name = category.Name;
-                // Thêm các thuộc tính khác nếu có
                 _context.SaveChanges();
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerifyCode_Form));
             this.label1 = new System.Windows.Forms.Label();
             this.txtOTP = new System.Windows.Forms.TextBox();
             this.btnXacMinh = new System.Windows.Forms.Button();
@@ -110,6 +111,7 @@
             this.Controls.Add(this.txtOTP);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VerifyCode_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OTP Code Verification";

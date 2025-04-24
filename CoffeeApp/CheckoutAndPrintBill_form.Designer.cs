@@ -182,6 +182,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "CheckoutAndPrintBill_form";
             this.Size = new System.Drawing.Size(1054, 753);
             this.panel1.ResumeLayout(false);

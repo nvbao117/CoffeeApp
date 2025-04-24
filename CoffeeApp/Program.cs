@@ -16,7 +16,7 @@ namespace CoffeeApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new form_login());
+            Application.Run(new Form1());
             
         }
     }

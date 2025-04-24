@@ -47,7 +47,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(712, 19);
+            this.label5.Location = new System.Drawing.Point(795, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(203, 32);
             this.label5.TabIndex = 21;
@@ -55,9 +55,12 @@
             // 
             // btnMonthly
             // 
-            this.btnMonthly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnMonthly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(162)))), ((int)(((byte)(118)))));
+            this.btnMonthly.FlatAppearance.BorderSize = 0;
+            this.btnMonthly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMonthly.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonthly.Location = new System.Drawing.Point(136, 19);
+            this.btnMonthly.ForeColor = System.Drawing.Color.Black;
+            this.btnMonthly.Location = new System.Drawing.Point(148, 3);
             this.btnMonthly.Name = "btnMonthly";
             this.btnMonthly.Size = new System.Drawing.Size(127, 48);
             this.btnMonthly.TabIndex = 20;
@@ -67,9 +70,12 @@
             // 
             // btnWeekly
             // 
-            this.btnWeekly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnWeekly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(162)))), ((int)(((byte)(118)))));
+            this.btnWeekly.FlatAppearance.BorderSize = 0;
+            this.btnWeekly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWeekly.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWeekly.Location = new System.Drawing.Point(3, 19);
+            this.btnWeekly.ForeColor = System.Drawing.Color.Black;
+            this.btnWeekly.Location = new System.Drawing.Point(15, 3);
             this.btnWeekly.Name = "btnWeekly";
             this.btnWeekly.Size = new System.Drawing.Size(127, 48);
             this.btnWeekly.TabIndex = 19;
@@ -80,9 +86,9 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.flowRecent);
-            this.panel7.Location = new System.Drawing.Point(594, 54);
+            this.panel7.Location = new System.Drawing.Point(687, 54);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(418, 381);
+            this.panel7.Size = new System.Drawing.Size(437, 381);
             this.panel7.TabIndex = 18;
             // 
             // flowRecent
@@ -92,16 +98,16 @@
             this.flowRecent.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowRecent.Location = new System.Drawing.Point(0, 0);
             this.flowRecent.Name = "flowRecent";
-            this.flowRecent.Size = new System.Drawing.Size(418, 381);
+            this.flowRecent.Size = new System.Drawing.Size(437, 381);
             this.flowRecent.TabIndex = 0;
             this.flowRecent.WrapContents = false;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.chartRevenue);
-            this.panel8.Location = new System.Drawing.Point(3, 94);
+            this.panel8.Location = new System.Drawing.Point(13, 73);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(585, 341);
+            this.panel8.Size = new System.Drawing.Size(642, 362);
             this.panel8.TabIndex = 17;
             // 
             // chartRevenue
@@ -117,7 +123,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartRevenue.Series.Add(series1);
-            this.chartRevenue.Size = new System.Drawing.Size(585, 341);
+            this.chartRevenue.Size = new System.Drawing.Size(642, 362);
             this.chartRevenue.TabIndex = 0;
             this.chartRevenue.Text = "chart1";
             // 
@@ -129,8 +135,9 @@
             this.Controls.Add(this.btnWeekly);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
+            this.DoubleBuffered = true;
             this.Name = "overviewdashboard";
-            this.Size = new System.Drawing.Size(1015, 455);
+            this.Size = new System.Drawing.Size(1142, 455);
             this.Load += new System.EventHandler(this.overviewdashboard_Load);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

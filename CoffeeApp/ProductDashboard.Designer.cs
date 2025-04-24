@@ -39,7 +39,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1015, 440);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1142, 440);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -51,17 +51,18 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1015, 455);
+            this.panel1.Size = new System.Drawing.Size(1142, 455);
             this.panel1.TabIndex = 1;
             // 
             // ProductDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "ProductDashboard";
-            this.Size = new System.Drawing.Size(1015, 455);
+            this.Size = new System.Drawing.Size(1142, 455);
             this.Load += new System.EventHandler(this.ProductDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

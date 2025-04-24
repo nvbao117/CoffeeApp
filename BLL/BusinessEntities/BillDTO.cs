@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Entities
+namespace BLL.BusinessEntities
 {
-    public class Bill
+    public class BillDTO
     {
         public int Id { get; set; }
         public DateTime? DateCheckIn { get; set; }
@@ -15,16 +15,6 @@ namespace DAL.Entities
         public int Discount { get; set; }
         public double? TotalPrice { get; set; }
 
-        public int IdTable { get; set; }  // Khóa ngoại
-        public virtual TableFood TableFood { get; set; }  
-
-        public virtual ICollection<BillInfo> BillInfos { get; set; }
-
-        public Bill()
-        {
-            BillInfos = new HashSet<BillInfo>();
-        }   
-
-
+        public int IdTable { get; set; }
     }
 }

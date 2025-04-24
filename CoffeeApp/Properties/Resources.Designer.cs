@@ -244,6 +244,26 @@ namespace CoffeeApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap split_13070219 {
+            get {
+                object obj = ResourceManager.GetObject("split_13070219", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap swap_8482621 {
+            get {
+                object obj = ResourceManager.GetObject("swap_8482621", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Table {
             get {
                 object obj = ResourceManager.GetObject("Table", resourceCulture);

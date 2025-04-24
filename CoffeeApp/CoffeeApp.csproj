@@ -96,6 +96,7 @@
     <Compile Include="CreateAccount_Form.Designer.cs">
       <DependentUpon>CreateAccount_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customize\MenuItemCard.cs" />
     <Compile Include="Customize\ProductCard.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -135,6 +136,18 @@
     <Compile Include="form_login.Designer.cs">
       <DependentUpon>form_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order_drink_control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Order_drink_control.Designer.cs">
+      <DependentUpon>Order_drink_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Order_form.Designer.cs">
+      <DependentUpon>Order_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="overviewdashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,17 +164,17 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="ReviewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewOrder.Designer.cs">
+      <DependentUpon>ReviewOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Table_form.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Table_form.Designer.cs">
       <DependentUpon>Table_form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="UIHelpers\ImageHelper.cs" />
     <Compile Include="UIHelpers\UIHelper.cs" />
@@ -195,6 +208,8 @@
     <Content Include="Resources\imgProduct\prd6.jpg" />
     <Content Include="Resources\imgProduct\prd7.jpg" />
     <Content Include="Resources\imgProduct\prd9.jpg" />
+    <None Include="Resources\swap_8482621.png" />
+    <None Include="Resources\split_13070219.png" />
     <EmbeddedResource Include="Account_form.resx">
       <DependentUpon>Account_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +249,12 @@
     <EmbeddedResource Include="form_login.resx">
       <DependentUpon>form_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Order_drink_control.resx">
+      <DependentUpon>Order_drink_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_form.resx">
+      <DependentUpon>Order_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="overviewdashboard.resx">
       <DependentUpon>overviewdashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,11 +271,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReviewOrder.resx">
+      <DependentUpon>ReviewOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Table_form.resx">
       <DependentUpon>Table_form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyCode_Form.resx">
       <DependentUpon>VerifyCode_Form.cs</DependentUpon>

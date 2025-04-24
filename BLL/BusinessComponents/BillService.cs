@@ -27,9 +27,29 @@ namespace BLL.BusinessComponents
         }
         public int getMonthRevenue()
         {
+            
             return _repository.getMonthRevenue();
         }
 
+        public void createBill(int idTable, List<OrderItem> list)
+        {
+            if (list == null || list.Count == 0)
+                return;
+            _repository.InsertBill(new Bill
+            {
+                BillInfos = list.Select(item => new BillInfo
+                {
+                    IdFood = item.Food.Id,
+                    Count = item.Quantity,
+                }).ToList(),
+
+                IdTable = idTable,
+                DateCheckIn = DateTime.Now,
+                Status = 0,
+                Discount = 0,
+                TotalPrice = list.Sum(item => item.Subtotal)
+            });
+        }
         public List<MonthlyRevenueDTO> GetMonthlyRevenueOfCurrentYear()
         {
             var months = Enumerable.Range(1, 12).Select(m => new MonthlyRevenueDTO { Month = m, Revenue = 0 }).ToList();

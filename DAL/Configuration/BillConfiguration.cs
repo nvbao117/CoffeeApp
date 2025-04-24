@@ -15,6 +15,7 @@ namespace DAL.Configuration
             ToTable("Bill");
             HasKey(b => b.Id);
 
+            Property(b => b.Id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(b => b.DateCheckIn).IsRequired();
             Property(b => b.DateCheckOut).IsOptional();
             Property(b => b.Status).IsRequired();
@@ -22,9 +23,9 @@ namespace DAL.Configuration
             Property(b => b.TotalPrice).IsOptional();
 
             // Khai báo mối quan hệ giữa Bill và TableFood
-            HasRequired(b => b.TableFood)  // Mối quan hệ bắt buộc với TableFood
-                .WithMany(t => t.Bills)  // Một TableFood có thể có nhiều Bill
-                .HasForeignKey(b => b.IdTable);  // Liên kết qua khóa ngoại TableFoodId
+            HasRequired(b => b.TableFood)  
+                .WithMany(t => t.Bills)
+                .HasForeignKey(b => b.IdTable);
         }
     }
 }

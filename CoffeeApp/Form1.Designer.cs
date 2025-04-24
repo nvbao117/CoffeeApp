@@ -30,6 +30,7 @@ namespace CoffeeApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@ namespace CoffeeApp
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(44)))), ((int)(((byte)(33)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(29)))), ((int)(((byte)(14)))));
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblRole);
             this.panel1.Controls.Add(this.btnCheckout);
@@ -67,9 +68,10 @@ namespace CoffeeApp
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(238)))), ((int)(((byte)(230)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 800);
+            this.panel1.Size = new System.Drawing.Size(243, 800);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -77,8 +79,8 @@ namespace CoffeeApp
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(32, 261);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.lblName.Location = new System.Drawing.Point(17, 261);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(213, 37);
             this.lblName.TabIndex = 7;
@@ -88,8 +90,8 @@ namespace CoffeeApp
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(95, 221);
+            this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.lblRole.Location = new System.Drawing.Point(83, 221);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(80, 28);
             this.lblRole.TabIndex = 4;
@@ -101,12 +103,12 @@ namespace CoffeeApp
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnCheckout.Image = global::CoffeeApp.Properties.Resources.self_service_5025580;
             this.btnCheckout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCheckout.Location = new System.Drawing.Point(12, 598);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(242, 55);
+            this.btnCheckout.Size = new System.Drawing.Size(206, 55);
             this.btnCheckout.TabIndex = 6;
             this.btnCheckout.Text = "CHECKOUT";
             this.btnCheckout.UseVisualStyleBackColor = true;
@@ -118,12 +120,12 @@ namespace CoffeeApp
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnLogout.Image = global::CoffeeApp.Properties.Resources.log_out_10024225;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(12, 733);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(242, 55);
+            this.btnLogout.Size = new System.Drawing.Size(206, 55);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "LOGOUT";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -135,12 +137,12 @@ namespace CoffeeApp
             this.btnOrder.FlatAppearance.BorderSize = 0;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.Transparent;
+            this.btnOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnOrder.Image = global::CoffeeApp.Properties.Resources.manifest_16767941;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrder.Location = new System.Drawing.Point(12, 537);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(242, 55);
+            this.btnOrder.Size = new System.Drawing.Size(206, 55);
             this.btnOrder.TabIndex = 4;
             this.btnOrder.Text = "ORDER";
             this.btnOrder.UseVisualStyleBackColor = true;
@@ -152,12 +154,12 @@ namespace CoffeeApp
             this.btnStats.FlatAppearance.BorderSize = 0;
             this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStats.ForeColor = System.Drawing.Color.Transparent;
+            this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnStats.Image = global::CoffeeApp.Properties.Resources.poll_9449270;
             this.btnStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStats.Location = new System.Drawing.Point(12, 476);
             this.btnStats.Name = "btnStats";
-            this.btnStats.Size = new System.Drawing.Size(242, 55);
+            this.btnStats.Size = new System.Drawing.Size(206, 55);
             this.btnStats.TabIndex = 3;
             this.btnStats.Text = "STATS";
             this.btnStats.UseVisualStyleBackColor = true;
@@ -169,12 +171,12 @@ namespace CoffeeApp
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnAdmin.Image = global::CoffeeApp.Properties.Resources.web_development_762714;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmin.Location = new System.Drawing.Point(12, 415);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(242, 55);
+            this.btnAdmin.Size = new System.Drawing.Size(206, 55);
             this.btnAdmin.TabIndex = 2;
             this.btnAdmin.Text = "ADMIN";
             this.btnAdmin.UseVisualStyleBackColor = true;
@@ -186,12 +188,12 @@ namespace CoffeeApp
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnDashboard.Image = global::CoffeeApp.Properties.Resources.dashboard_1991103__2_;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(12, 354);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(242, 55);
+            this.btnDashboard.Size = new System.Drawing.Size(206, 55);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "DASHBOARD";
             this.btnDashboard.UseVisualStyleBackColor = true;
@@ -200,28 +202,29 @@ namespace CoffeeApp
             // ptrAvatar
             // 
             this.ptrAvatar.Image = global::CoffeeApp.Properties.Resources.defaultAVT;
-            this.ptrAvatar.Location = new System.Drawing.Point(29, 41);
+            this.ptrAvatar.Location = new System.Drawing.Point(28, 41);
             this.ptrAvatar.Name = "ptrAvatar";
-            this.ptrAvatar.Size = new System.Drawing.Size(216, 163);
+            this.ptrAvatar.Size = new System.Drawing.Size(190, 163);
             this.ptrAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptrAvatar.TabIndex = 0;
             this.ptrAvatar.TabStop = false;
             // 
             // mainPanel
             // 
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainPanel.ForeColor = System.Drawing.Color.Black;
-            this.mainPanel.Location = new System.Drawing.Point(266, 41);
+            this.mainPanel.Location = new System.Drawing.Point(243, 41);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1054, 759);
+            this.mainPanel.Size = new System.Drawing.Size(1177, 759);
             this.mainPanel.TabIndex = 2;
             // 
             // lblHeaderName
             // 
             this.lblHeaderName.AutoSize = true;
             this.lblHeaderName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderName.Location = new System.Drawing.Point(796, 12);
+            this.lblHeaderName.Location = new System.Drawing.Point(917, 9);
             this.lblHeaderName.Name = "lblHeaderName";
             this.lblHeaderName.Size = new System.Drawing.Size(179, 20);
             this.lblHeaderName.TabIndex = 2;
@@ -230,7 +233,7 @@ namespace CoffeeApp
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CoffeeApp.Properties.Resources.user_12483574;
-            this.pictureBox2.Location = new System.Drawing.Point(755, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(876, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,15 +242,16 @@ namespace CoffeeApp
             // 
             // headerPanel
             // 
+            this.headerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.headerPanel.Controls.Add(this.lblExit);
             this.headerPanel.Controls.Add(this.pictureBox2);
             this.headerPanel.Controls.Add(this.lblHeaderName);
             this.headerPanel.Controls.Add(this.label2);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPanel.ForeColor = System.Drawing.Color.Black;
-            this.headerPanel.Location = new System.Drawing.Point(266, 0);
+            this.headerPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.headerPanel.Location = new System.Drawing.Point(243, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1054, 41);
+            this.headerPanel.Size = new System.Drawing.Size(1177, 41);
             this.headerPanel.TabIndex = 1;
             this.headerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -255,7 +259,7 @@ namespace CoffeeApp
             // 
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(1023, 7);
+            this.lblExit.Location = new System.Drawing.Point(1138, 5);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(27, 25);
             this.lblExit.TabIndex = 4;
@@ -276,12 +280,13 @@ namespace CoffeeApp
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1320, 800);
+            this.ClientSize = new System.Drawing.Size(1420, 800);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

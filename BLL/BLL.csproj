@@ -62,10 +62,13 @@
     <Compile Include="BusinessComponents\TableService.cs" />
     <Compile Include="BusinessComponents\UserService.cs" />
     <Compile Include="BusinessEntities\ActivityDTO.cs" />
+    <Compile Include="BusinessEntities\BillDTO.cs" />
+    <Compile Include="BusinessEntities\BillInfoDTO.cs" />
     <Compile Include="BusinessEntities\FoodCategoryDTO.cs" />
     <Compile Include="BusinessEntities\EmployeeDTO.cs" />
     <Compile Include="BusinessEntities\FoodDTO.cs" />
     <Compile Include="BusinessEntities\MonthlyRevenueDTO.cs" />
+    <Compile Include="BusinessEntities\OrderItem.cs" />
     <Compile Include="BusinessEntities\PasswordResetTokenDTO.cs" />
     <Compile Include="BusinessEntities\RoleDTO.cs" />
     <Compile Include="BusinessEntities\TableFoodDTO.cs" />

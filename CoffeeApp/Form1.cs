@@ -98,7 +98,8 @@ namespace CoffeeApp
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(btnOrder);
+            LoadUserControl(new Order_form());
         }
 
         private void btnCheckout_Click(object sender, EventArgs e)
@@ -138,12 +139,10 @@ namespace CoffeeApp
         {
             if (currentButton != null)
             {
-                ResetButtonStyles(currentButton); // Reset cái cũ
+                ResetButtonStyles(currentButton); 
             }
-
-            // Đổi style button mới
             currentButton = clickedButton;
-            currentButton.BackColor = Color.FromArgb(30, 136, 229); 
+            currentButton.BackColor = Color.FromArgb(217, 140, 43); 
             currentButton.ForeColor = Color.White;
             currentButton.Font = new Font(currentButton.Font, FontStyle.Bold);
         }

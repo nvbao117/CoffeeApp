@@ -66,11 +66,11 @@
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,7 +89,7 @@
             this.panel1.Controls.Add(this.dgvData);
             this.panel1.Location = new System.Drawing.Point(3, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1048, 322);
+            this.panel1.Size = new System.Drawing.Size(1157, 322);
             this.panel1.TabIndex = 0;
             // 
             // dgvData
@@ -113,7 +113,7 @@
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(1048, 322);
+            this.dgvData.Size = new System.Drawing.Size(1157, 322);
             this.dgvData.TabIndex = 0;
             // 
             // colEmployeeId
@@ -202,11 +202,12 @@
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Location = new System.Drawing.Point(4, 380);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 376);
+            this.panel2.Size = new System.Drawing.Size(644, 376);
             this.panel2.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(113)))), ((int)(((byte)(72)))));
             this.groupBox1.Controls.Add(this.txtLinkImage);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtNote);
@@ -229,14 +230,14 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(540, 376);
+            this.groupBox1.Size = new System.Drawing.Size(644, 376);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
             // 
             // txtLinkImage
             // 
-            this.txtLinkImage.Location = new System.Drawing.Point(196, 334);
+            this.txtLinkImage.Location = new System.Drawing.Point(228, 334);
             this.txtLinkImage.Name = "txtLinkImage";
             this.txtLinkImage.Size = new System.Drawing.Size(327, 32);
             this.txtLinkImage.TabIndex = 17;
@@ -252,7 +253,7 @@
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(196, 292);
+            this.txtNote.Location = new System.Drawing.Point(228, 292);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(327, 32);
             this.txtNote.TabIndex = 15;
@@ -268,7 +269,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(196, 252);
+            this.txtAddress.Location = new System.Drawing.Point(228, 252);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(327, 32);
             this.txtAddress.TabIndex = 13;
@@ -284,7 +285,7 @@
             // 
             // txtHireDate
             // 
-            this.txtHireDate.Location = new System.Drawing.Point(196, 213);
+            this.txtHireDate.Location = new System.Drawing.Point(228, 213);
             this.txtHireDate.Name = "txtHireDate";
             this.txtHireDate.Size = new System.Drawing.Size(327, 32);
             this.txtHireDate.TabIndex = 11;
@@ -300,7 +301,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(196, 174);
+            this.txtPhone.Location = new System.Drawing.Point(228, 174);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(327, 32);
             this.txtPhone.TabIndex = 9;
@@ -316,7 +317,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(196, 135);
+            this.txtEmail.Location = new System.Drawing.Point(228, 135);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(327, 32);
             this.txtEmail.TabIndex = 7;
@@ -332,7 +333,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(196, 98);
+            this.txtLastName.Location = new System.Drawing.Point(228, 98);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(327, 32);
             this.txtLastName.TabIndex = 5;
@@ -348,7 +349,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(196, 63);
+            this.txtFirstName.Location = new System.Drawing.Point(228, 63);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(327, 32);
             this.txtFirstName.TabIndex = 3;
@@ -364,7 +365,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(196, 25);
+            this.txtID.Location = new System.Drawing.Point(228, 25);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(327, 32);
             this.txtID.TabIndex = 1;
@@ -382,13 +383,14 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Location = new System.Drawing.Point(776, 383);
+            this.panel3.Location = new System.Drawing.Point(885, 380);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(275, 376);
             this.panel3.TabIndex = 2;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(113)))), ((int)(((byte)(72)))));
             this.groupBox2.Controls.Add(this.btnChoseImage);
             this.groupBox2.Controls.Add(this.panel6);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -402,12 +404,14 @@
             // 
             // btnChoseImage
             // 
+            this.btnChoseImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
+            this.btnChoseImage.ForeColor = System.Drawing.Color.White;
             this.btnChoseImage.Location = new System.Drawing.Point(32, 276);
             this.btnChoseImage.Name = "btnChoseImage";
             this.btnChoseImage.Size = new System.Drawing.Size(211, 54);
             this.btnChoseImage.TabIndex = 1;
             this.btnChoseImage.Text = "Chọn Ảnh";
-            this.btnChoseImage.UseVisualStyleBackColor = true;
+            this.btnChoseImage.UseVisualStyleBackColor = false;
             this.btnChoseImage.Click += new System.EventHandler(this.btnChoseImage_Click);
             // 
             // panel6
@@ -431,13 +435,14 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.groupBox4);
-            this.panel5.Location = new System.Drawing.Point(550, 383);
+            this.panel5.Location = new System.Drawing.Point(666, 380);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(213, 373);
             this.panel5.TabIndex = 4;
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(113)))), ((int)(((byte)(72)))));
             this.groupBox4.Controls.Add(this.btnRefresh);
             this.groupBox4.Controls.Add(this.btnEdit);
             this.groupBox4.Controls.Add(this.btnDelete);
@@ -451,8 +456,24 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thao Tác";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = global::CoffeeApp.Properties.Resources.circular_11417919;
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(15, 290);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(175, 57);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::CoffeeApp.Properties.Resources.updated_5625789;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(15, 141);
@@ -460,11 +481,13 @@
             this.btnEdit.Size = new System.Drawing.Size(175, 64);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::CoffeeApp.Properties.Resources.delete_10336397;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(15, 57);
@@ -472,11 +495,13 @@
             this.btnDelete.Size = new System.Drawing.Size(175, 70);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::CoffeeApp.Properties.Resources.plus_1828821;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(15, 219);
@@ -484,7 +509,7 @@
             this.btnAdd.Size = new System.Drawing.Size(175, 57);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label9
@@ -497,29 +522,18 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Employee Mangement";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Image = global::CoffeeApp.Properties.Resources.circular_11417919;
-            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(15, 290);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(175, 57);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // Employee_Management_form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(188)))), ((int)(((byte)(145)))));
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "Employee_Management_form";
-            this.Size = new System.Drawing.Size(1054, 759);
+            this.Size = new System.Drawing.Size(1177, 759);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.panel2.ResumeLayout(false);

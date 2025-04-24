@@ -63,25 +63,26 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(17, 26);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.Location = new System.Drawing.Point(19, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 196);
+            this.panel1.Size = new System.Drawing.Size(1142, 196);
             this.panel1.TabIndex = 0;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(44)))), ((int)(((byte)(33)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(170)))), ((int)(((byte)(113)))));
             this.panel6.Controls.Add(this.lblTotalRevenue);
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Location = new System.Drawing.Point(774, 12);
+            this.panel6.Location = new System.Drawing.Point(853, 12);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(221, 172);
+            this.panel6.Size = new System.Drawing.Size(234, 172);
             this.panel6.TabIndex = 1;
             // 
             // lblTotalRevenue
@@ -117,14 +118,14 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(44)))), ((int)(((byte)(33)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(170)))), ((int)(((byte)(113)))));
             this.panel5.Controls.Add(this.lblTodayRevenue);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(520, 12);
+            this.panel5.Location = new System.Drawing.Point(585, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(221, 172);
+            this.panel5.Size = new System.Drawing.Size(234, 172);
             this.panel5.TabIndex = 1;
             // 
             // lblTodayRevenue
@@ -160,14 +161,14 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(44)))), ((int)(((byte)(33)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(170)))), ((int)(((byte)(113)))));
             this.panel4.Controls.Add(this.lblCountStaff);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(269, 12);
+            this.panel4.Location = new System.Drawing.Point(317, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(221, 172);
+            this.panel4.Size = new System.Drawing.Size(234, 172);
             this.panel4.TabIndex = 1;
             // 
             // lblCountStaff
@@ -203,14 +204,14 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(44)))), ((int)(((byte)(33)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(170)))), ((int)(((byte)(113)))));
             this.panel3.Controls.Add(this.lblTable);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(16, 12);
+            this.panel3.Location = new System.Drawing.Point(49, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 172);
+            this.panel3.Size = new System.Drawing.Size(234, 172);
             this.panel3.TabIndex = 0;
             // 
             // lblTable
@@ -246,10 +247,11 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(17, 280);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(162)))), ((int)(((byte)(118)))));
+            this.panel2.Location = new System.Drawing.Point(19, 275);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1015, 455);
+            this.panel2.Size = new System.Drawing.Size(1142, 455);
             this.panel2.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -257,9 +259,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnOverview);
             this.flowLayoutPanel1.Controls.Add(this.btnProduct);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 228);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 223);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(261, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(262, 46);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // btnOverview
@@ -293,12 +295,13 @@
             // form_dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(52)))));
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "form_dashboard";
-            this.Size = new System.Drawing.Size(1054, 753);
+            this.Size = new System.Drawing.Size(1177, 759);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

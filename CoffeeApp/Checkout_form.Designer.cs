@@ -65,6 +65,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(190)))), ((int)(((byte)(169)))));
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Name = "Checkout_form";
             this.Size = new System.Drawing.Size(1054, 753);
             this.flowLayoutPanel1.ResumeLayout(false);

@@ -61,7 +61,7 @@ namespace CoffeeApp.Customize
         {
             _food = food;
             this.BackColor = Color.White;
-            this.Size = new Size(230, 250);
+            this.Size = new Size(200, 250);
             this.Padding = new Padding(8);
             this.Cursor = Cursors.Hand;
             this.Margin = new Padding(9);
